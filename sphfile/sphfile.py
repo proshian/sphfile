@@ -128,7 +128,7 @@ class SPHFile(object):
                 data = self.time_range(start, stop)
             else:
                 data = self.content
-            fh.writeframes(data.tostring())
+            fh.writeframes(data.tobytes())
         return filename
 
     def write_sph(self, filename, start=None, stop=None,extra_headers=None):
